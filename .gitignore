@@ -1,0 +1,11 @@
+# Generated files
+.dart_tool/
+.packages
+build/
+.flutter-plugins-dependencies
+*.iml
+test/widget_test.mocks.dart
+
+# IDE files
+.idea/
+.vscode/
