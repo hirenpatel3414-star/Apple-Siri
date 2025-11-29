@@ -94,13 +94,15 @@ class _VoiceAssistantPageState extends State<VoiceAssistantPage> {
   }
 
   void _processCommand(String command) {
-    if (command.toLowerCase().contains('hello')) {
-      _response = 'Hello there!';
-    } else if (command.toLowerCase().contains('goodbye')) {
-      _response = 'Goodbye!';
-    } else {
-      _response = "I'm sorry, I don't understand that command.";
-    }
+    setState(() {
+      if (command.toLowerCase().contains('hello')) {
+        _response = 'Hello there!';
+      } else if (command.toLowerCase().contains('goodbye')) {
+        _response = 'Goodbye!';
+      } else {
+        _response = "I'm sorry, I don't understand that command.";
+      }
+    });
     _speak(_response);
   }
 
